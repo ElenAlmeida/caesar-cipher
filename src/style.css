@@ -1,0 +1,47 @@
+*{
+    background: #035E5D;
+    font-family: gabriola, 'Courier New', Courier, monospace, Comic-sans-Ms, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    width: 500px;
+    height: 500px;
+    margin: 50px 400px;
+      
+}
+body, label, input, textarea{
+    display: block;
+}
+body, textarea{
+    width:500px;
+    height: 60px;
+    background: #E4F3F3;    
+    font-size: 25px;
+    color: black;
+}
+
+body, input[type=number]{
+    background: #E4F3F3;
+    color: black;
+    font-size: 25px;
+}
+body button {
+    width: 150px;
+    height:50px;
+    border: 0px;
+    background-color: #D1CCEA;
+    color: black;
+    cursor: pointer;
+    font-family: Calibri, Comic-sans-Ms, 'Courier New', Courier, monospace, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+button:hover{
+    text-decoration: underline;
+    color: white;
+    background: #BD1D08;
+}
+body p{
+    color: white;
+    font-size: 30px;
+}

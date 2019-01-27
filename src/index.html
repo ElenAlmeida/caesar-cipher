@@ -2,12 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Cypher</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div id="root"></div>
+    <h1>Cipher</h1>
+    <label for="string">Digite sua mensagem:</label>
+    <textarea style="resize:none" value="" id="string" autocomplete="off" rez></textarea>
+    <label for="offset">Digite o deslocamento desejado de letras:</label>
+    <input type="number" value="" id="offset" autocomplete="off"></input>
+    <p id="msgcodificada"></p>
+    <p id="msgdescod"></p>
+    <button onclick="cipherencode()">Codificar</button>
+    <button onclick="cipherdecode()">Descifrar</button>    
     <script src="cipher.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
