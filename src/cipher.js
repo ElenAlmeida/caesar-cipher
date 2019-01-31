@@ -1,14 +1,14 @@
-function cipherencode(variavel, setup){ 
+function cipherencode(messenger, move){ 
   let cod="";
   let codAsc=[];
-  for(let i=0; i<variavel.length; i++){
-        codAsc=variavel[i].charCodeAt();
+  for(let i=0; i<messenger.length; i++){
+        codAsc=messenger[i].charCodeAt();
         console.log('result', codAsc)
     if(codAsc>=65 && codAsc<=90){
-      cod+=String.fromCharCode(((codAsc-65+(setup %26)+26)%26)+65);
+      cod+=String.fromCharCode(((codAsc-65+(move %26)+26)%26)+65);
     }
     else if(codAsc>=97 && codAsc<=122){
-      cod+=String.fromCharCode(((codAsc-97+(setup %26)+26)%26)+97);
+      cod+=String.fromCharCode(((codAsc-97+(move %26)+26)%26)+97);
       console.log('ver', cod)
     }else{
       cod+=String.fromCharCode(codAsc);
@@ -17,17 +17,17 @@ function cipherencode(variavel, setup){
  return cod;
 }
 
-function cipherdecode(variavel2, setup2){ 
+function cipherdecode(messenger2, move2){ 
   let cod2="";
   let codAsc2=[];
-  for(let i=0; i<variavel2.length; i++){
-        codAsc2=variavel2[i].charCodeAt();
+  for(let i=0; i<messenger2.length; i++){
+        codAsc2=messenger2[i].charCodeAt();
         console.log('result',codAsc2)
     if(codAsc2>=65 && codAsc2<=90){
-      cod2+=String.fromCharCode(((codAsc2-65-(setup2 %26)+26)%26)+65);
+      cod2+=String.fromCharCode(((codAsc2-65-(move2 %26)+26)%26)+65);
     }
     else if(codAsc2>=97 && codAsc2<=122){
-      cod2+=String.fromCharCode(((codAsc2-97-(setup2 %26)+26)%26)+97);
+      cod2+=String.fromCharCode(((codAsc2-97-(move2 %26)+26)%26)+97);
       console.log('ver',cod2)
     }else{
       cod2+=String.fromCharCode(codAsc2);
@@ -37,17 +37,15 @@ function cipherdecode(variavel2, setup2){
 }
 
 function cipher(){
-  let variavel= document.getElementById('string').value;
- console.log('ver', variavel)
-  let stu=document.getElementById('offset').value; 
-  let setup= parseInt(stu);
-  console.log('ver', setup);
-  document.getElementById('msgcodificada').innerHTML=cipherencode(variavel, setup);
+  let messenger= document.getElementById('string').value;
+    console.log('ver', messenger)
+  let move= parseInt(document.getElementById('offset').value);
+    console.log('ver', move);
+  document.getElementById('msgcodificada').innerHTML=cipherencode(messenger, move);
 }
 function cipher2(){
-  const variavel2= document.getElementById('string').value;
-  const sut=document.getElementById('offset').value; 
-  const setup2= parseInt(sut);
-  console.log('ver', setup2)
-  document.getElementById('msgdescod').innerHTML=cipherdecode(variavel2, setup2);
+  let messenger2= document.getElementById('string').value;
+  let move2= parseInt(document.getElementById('offset').value);
+    console.log('ver', move2)
+  document.getElementById('msgdescod').innerHTML=cipherdecode(messenger2, move2);
 }
