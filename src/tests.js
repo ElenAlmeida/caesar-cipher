@@ -1,13 +1,13 @@
 
 var resposta= cipherencode('abcdefghijklmnopqrstuvxz',1);
 if(resposta==='bcdefghijklmnopqrstuvwya'){
-  console.log('Se deu bem');
+  console.log('Se deu bem')
 }else{
-  console.log('Se deu mal, resposta correta bcdefghijklmnopqrstuvwya');
+  console.log('Se deu mal, resposta correta bcdefghijklmnopqrstuvwya')
 }
 var resposta1= cipherdecode('bcdefghijklmnopqrstuvwya',1);
 if(resposta1==='abcdefghijklmnopqrstuvxz'){
-  console.log('Positive');
+  console.log('Positive')
 }else{
   console.log('Error')
 }
